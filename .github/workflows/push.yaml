@@ -3,7 +3,9 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: golang:1.22
+    env:
+      GOTOOLCHAIN: auto
+    # container: golang:1.22
     steps:
       - uses: actions/checkout@v4
 
